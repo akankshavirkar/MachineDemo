@@ -30,7 +30,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Page<CategoryDto> getAllCategories(int page) {
-        Pageable pageable = PageRequest.of(page, 10);
+        Pageable pageable = PageRequest.of(page, 5);
         return categoryRepository.findAll(pageable)
                 .map(CategoryDto::fromEntity);
     }

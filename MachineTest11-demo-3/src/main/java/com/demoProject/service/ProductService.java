@@ -11,9 +11,10 @@ import com.demoProject.DTO.ProductResponseDto;
 
 
 public interface ProductService {
-    Page<ProductResponseDto> getAllProducts(int page);
+   // Page<ProductResponseDto> getAllProducts(int page);
     ProductResponseDto getProductById(Long id);
     ProductResponseDto createProduct(ProductDto productDto);
     ProductResponseDto updateProduct(Long id, ProductDto productDto);
     void deleteProduct(Long id);
+	Page<ProductResponseDto> getAllProducts(int page);
 }
